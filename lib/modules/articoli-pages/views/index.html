@@ -1,12 +1,12 @@
-{% extends "layout.html" %}
+ {% extends "layout.html" %}
 {% block main %}
-    <h1> Ciao</h1>
-    
     <div class="main-content">
-        {% for articolo in data.piece._articoli %}
-            <p>
-                {{articolo.nome}}
-            </p>
-        {% endfor %}
+        {% for articolo in data.pieces %}
+        <h1>
+            <a href="{{articolo._url}}">
+                {{ articolo.title }}
+            </a>
+        </h1>
+    {% endfor %}
     </div>
 {% endblock %}

@@ -8,7 +8,7 @@ var apos = require('apostrophe')({
     'articoli': {
       restApi: true
     },
-    'articoli-pages': {},
+    'articoli-pages': { extend: 'apostrophe-pieces-pages'},
     'articoli-widgets': {}, 
   }
 });
