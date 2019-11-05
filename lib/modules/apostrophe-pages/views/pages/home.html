@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <div class="main-content">
+    <h3>
+      {% if not data.user %}
+        <a class="login-link" href="{{ apos.prefix }}/login">Login</a>
+      {% endif %}
+    </h3>
+    <p> Welcome to the IKEA web sites</p>
+  </div>
+  <div class="main-content">
+    {{ apos.area(
+      data.page,  {widgets: {  'articoli':{}, 'apostrophe-rich-text': {} } })
+    }}
+
+  </div>
+{% endblock %}

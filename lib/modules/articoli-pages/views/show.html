@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block main %}
+    <H1> CIAO</H1>
+    <div class="main-content">
+        <h2 style="color:black">{{data.piece.nome}}</h2>
+        <span style="color:black">
+            {% for articolo in data.piece._articoli %}
+                <p>{{ articolo.nome }}</p>
+                <p> {{articolo.descrizione}}</p>
+            {% endfor %}
+        </span>
+
+    </div>
+{% endblock %}

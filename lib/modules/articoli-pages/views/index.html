@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block main %}
+    <h1> Ciao</h1>
+    
+    <div class="main-content">
+        {% for articolo in data.piece._articoli %}
+            <p>
+                {{articolo.nome}}
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}
