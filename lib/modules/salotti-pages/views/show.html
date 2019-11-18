@@ -2,6 +2,19 @@
 {% block main %}
     <div class="main-content">
         <h2>{{data.piece.nome}}</h2>
-        {{ apos.area(data.piece, 'body', {widgets: richTextWidget})}}
+    </div>
+
+    <div class="main-content">
+        <p>Articoli correlati</p>
+        {{  
+          apos.area(
+            data.page,
+            'testoCentrale',
+            {
+             widgets: {
+                'articoli': {}
+            }
+          })
+    }}
     </div>
 {% endblock %}
