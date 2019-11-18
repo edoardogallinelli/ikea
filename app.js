@@ -11,6 +11,7 @@ var apos = require('apostrophe')({
     'articoli-pages': { extend: 'apostrophe-pieces-pages' },
     'articoli-widgets': {},
     'salotti': {},
+    'salotti-pages': { extend: 'apostrophe-pieces-pages' },
 
   }
 });
