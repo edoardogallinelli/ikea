@@ -1,7 +1,11 @@
 {% extends "layout.html" %}
 {% block main %}
-    <div class="main-content">
-        <h2>{{data.piece.nome}}</h2>
-        {{ apos.area(data.piece, 'body', {widgets: richTextWidget})}}
-    </div>
+     <div class="col-xs-12 col-sm-7 col-content">
+      <h2 id="name">{{ data.piece.title }}
+      </h2>
+      </div>
+      <div id="paragraph" class="paragraph">
+        {{data.piece.description |safe}}
+      </div>
+  
 {% endblock %}
