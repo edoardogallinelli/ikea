@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block main %}
     <div class="main-content">
-        {% for articolo in data.pieces %}
+        {% for salotto in data.pieces %}
             <h1>
                 <a href="{{articolo._url}}">
-                    {{ articolo.title }}
+                    {{ salotto.title }}
                 </a>
-            </h1>
+             </h1>
         {% endfor %}
     </div>
 {% endblock %}
