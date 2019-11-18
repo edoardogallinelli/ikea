@@ -1,10 +1,7 @@
 {% extends "layout.html" %}
 {% block main %}
-     <div class="col-xs-12 col-sm-7 col-content">
-      <h2 id="name">{{ data.piece.title }}
-      </h2>
-      </div>
-      <div id="paragraph" class="paragraph">
-        {{data.piece.descrizione |safe}}
-      </div>
+  <div class="main-content">
+    <h2>{{ data.piece.title }}</h2>
+    <p>{{data.piece.descrizione}} </p>
+  </div>
 {% endblock %}
