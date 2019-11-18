@@ -2,6 +2,20 @@
 {% block main %}
   <div class="main-content">
     <h2>{{ data.piece.title }}</h2>
-    <p>{{data.piece.descrizione}} </p>
+    <p>{{data.piece.descrizione}}
+    </p>
+
+    <p>Articoli correlati</p>
+    {{  
+          apos.area(
+            data.page,
+            'testoCentrale',
+            {
+             widgets: {
+                'articoli': {}
+            }
+          })
+    }}
   </div>
+
 {% endblock %}
