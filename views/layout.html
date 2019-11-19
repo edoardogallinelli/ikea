@@ -24,24 +24,23 @@
     <div class="container-header">
       <nav class="header-area">
         <div class="rowh mb-5">
-          <div class="col">
-            <span class="titolo">
+          
+            
               IKEA
-            </span>
-          </div>
+            
+          
         </div>
+
         <div class="ricerca">
-          <div class="colb">
             <form method="GET" action="/search">
               <input type="text" name="q"/><input type="submit" value="Search"/>
             </form>
-
-          </div>
         </div>
 
       </nav>
 
     </div>
+  </header>
   {% endblock %}
 
   {% block main %}{% endblock %}
@@ -49,19 +48,14 @@
   {% block afterMain %}
     <footer>
       <nav class="footer-area">
-
-        <div class="coli">
-          <span class="indirizzo">
-            Palazzo Sceriman<br>
-            Cannaregio, 168<br>
-            30121 Venezia<br>
+          <address>
+            Nave di Capitan Uncino<br>
+            il coccodrillo tiktok, 168<br>
+            30121 Isola che non c'e'<br>
             Tel. 041.279 2411<br>
-
             Email:
-            <a>EZarredamenti@veneto.it</a>
-            <span></div>
-
-          </nav>
-
-        </footer>
+            <a>IKEA@oceano.it</a>
+          </address>
+      </nav>
+    </footer>
       {% endblock %}
