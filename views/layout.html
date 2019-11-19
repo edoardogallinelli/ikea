@@ -20,22 +20,48 @@
 {% endblock %}
 
 {% block beforeMain %}
-  {#
-    We recommend you use the beforeMain block for global page components
-    like headers or navigation.
-  #}
-{% endblock %}
+  <header>
+    <div class="container-header">
+      <nav class="header-area">
+        <div class="rowh mb-5">
+          <div class="col">
+            <span class="titolo">
+              IKEA
+            </span>
+          </div>
+        </div>
+        <div class="ricerca">
+          <div class="colb">
+            <form method="GET" action="/search">
+              <input type="text" name="q"/><input type="submit" value="Search"/>
+            </form>
 
-{% block main %}
-  {#
-    Usually, your page templates in the apostrophe-pages module will override
-    this block. It is safe to assume this is where your page-specific content
-    should go.
-  #}
-{% endblock %}
+          </div>
+        </div>
 
-{% block afterMain %}
-  {#
-    This would be a great place to put a global footer.
-  #}
-{% endblock %}
+      </nav>
+
+    </div>
+  {% endblock %}
+
+  {% block main %}{% endblock %}
+
+  {% block afterMain %}
+    <footer>
+      <nav class="footer-area">
+
+        <div class="coli">
+          <span class="indirizzo">
+            Palazzo Sceriman<br>
+            Cannaregio, 168<br>
+            30121 Venezia<br>
+            Tel. 041.279 2411<br>
+
+            Email:
+            <a>EZarredamenti@veneto.it</a>
+            <span></div>
+
+          </nav>
+
+        </footer>
+      {% endblock %}

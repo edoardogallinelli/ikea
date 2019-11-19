@@ -5,13 +5,22 @@ var apos = require('apostrophe')({
 
   modules: {
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
-    'articoli': {
-      restApi: true
-    },
+    'articoli': {},
     'articoli-pages': { extend: 'apostrophe-pieces-pages' },
     'articoli-widgets': {},
     'salotti': {},
     'salotti-pages': { extend: 'apostrophe-pieces-pages' },
-
-  }
+    'apostrophe-search': {},
+    'apostrophe-pages': {
+      park: [
+        {
+          title: 'Search',
+          slug: '/search',
+          type: 'apostrophe-search',
+          label: 'Search',
+          published: true
+        }
+      ]
+    }
+    }
 });
