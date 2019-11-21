@@ -11,6 +11,10 @@ var apos = require('apostrophe')({
     'salotti': {},
     'salotti-pages': { extend: 'apostrophe-pieces-pages' },
     'apostrophe-search': {},
+    'apostrophe-workflow': {
+      alias: 'workflow',
+      replicateAcrossLocales: false
+    },
     'apostrophe-pages': {
       park: [
         {
