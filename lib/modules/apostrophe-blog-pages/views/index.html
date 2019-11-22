@@ -1,0 +1,25 @@
+{% extends data.outerLayout %}
+{% block title %}{{ data.page.title }}{% endblock %}
+
+{% block main %}
+  {%- macro here(changes) -%}
+    {{ data.page._url | build({
+      year: data.query.year
+    }, changes) }}
+  {%- endmacro -%}
+
+  <ul class="apos-blog-filters">
+    <li><a href="{{ here({ year: null }) }}" class="apos-blog-filters-link">All years</a></li>
+    {% for year in data.piecesFilters.year %}
+      <li><a href="{{ here({ year: year.value }) }}" class="apos-blog-filters-link">{{ year.label }}</a></li>
+    {% endfor %}
+  </ul>
+  {% for piece in data.pieces %}
+    <div class="apos-blog-post-preview">
+      <h6 class="apos-blog-post-date">Published On {{ piece.publishedAt | date('MMMM Do, YYYY') }}</h6>
+      <h4 class="apos-blog-post-title"><a href="{{ piece._url }}">{{ piece.title }}</a></h4>
+    </div>
+  {% endfor %}
+  {% import 'apostrophe-pager:macros.html' as pager with context %}
+  {{ pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }}
+{% endblock %}

@@ -1,5 +1,4 @@
 var path = require('path');
-
 var apos = require('apostrophe')({
   shortName: 'ikea',
 
@@ -25,6 +24,26 @@ var apos = require('apostrophe')({
           published: true
         }
       ]
+    },
+    'apostrophe-blog': {},
+    'apostrophe-blog-pages': {},
+    'apostrophe-blog-widgets': {},
+    'apostrophe-pages': {
+      // We must list `apostrophe-blog-page` as one of the available page types
+      types: [
+        {
+          name: 'apostrophe-blog-page',
+          label: 'Blog'
+        },
+        {
+          name: 'default',
+          label: 'Default'
+        },
+        {
+          name: 'home',
+          label: 'Home'
+        }
+      ]
     }
-    }
+  }
 });
