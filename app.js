@@ -2,6 +2,7 @@ var path = require('path');
 var apos = require('apostrophe')({
   shortName: 'ikea',
 
+  bundles: ['apostrophe-events'], //boudles degli eventi
   modules: {
     'apostrophe-templates': { viewsFolderFallback: path.join(__dirname, 'views') },
     'articoli': {},
@@ -14,6 +15,11 @@ var apos = require('apostrophe')({
       alias: 'workflow',
       replicateAcrossLocales: false
     },
+    'apostrophe-events': {},
+    'apostrophe-events-pages': {
+      extend: 'apostrophe-pieces-pages',
+    },
+    'apostrophe-events-widgets': {},
     'apostrophe-pages': {
       park: [
         {
@@ -22,28 +28,23 @@ var apos = require('apostrophe')({
           type: 'apostrophe-search',
           label: 'Search',
           published: true
+        },
+        {
+          title: 'Events List',
+          slug: '/events-list',
+          type: 'apostrophe-events-page',
+          label: 'Events',
+          published: true
         }
+        //{
+        //  name: 'events-page',
+        //  label: 'Events Page',
+        //  type: 'apostrophe-events-page',
+        //  parkedId: 'lista-eventi',
+        //  published: true,
+        //  slug: '/lista-eventi'
+        //}
       ]
     },
-    'apostrophe-blog': {},
-    'apostrophe-blog-pages': {},
-    'apostrophe-blog-widgets': {},
-    'apostrophe-pages': {
-      // We must list `apostrophe-blog-page` as one of the available page types
-      types: [
-        {
-          name: 'apostrophe-blog-page',
-          label: 'Blog'
-        },
-        {
-          name: 'default',
-          label: 'Default'
-        },
-        {
-          name: 'home',
-          label: 'Home'
-        }
-      ]
-    }
   }
 });

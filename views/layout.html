@@ -1,6 +1,6 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
-{% extends data.outerLayout %}
 
+{% extends data.outerLayout %}
 {% block title %}
   {# Create a useful, SEO-friendly title tag based on what we have #}
   {% if data.piece %}
@@ -24,38 +24,30 @@
     <div class="container-header">
       <nav class="header-area">
         <div class="rowh mb-5">
-          
-            
-              IKEA
-            
-          
+          <h1>IKEA</h1>
         </div>
-
-        <div class="ricerca">
-            <form method="GET" action="/search">
-              <input type="text" name="q"/><input type="submit" value="Search"/>
-            </form>
-        </div>
-
       </nav>
-
+        <form class="apos-search-form apos-mini-search-form" action="/search">
+          Search:
+          <input type="text" name="q" value="" class="search-field"/>
+          <input type="submit" class="search-submit" value="Go"/>
+        </form>
     </div>
   </header>
-  {% endblock %}
+{% endblock %}
+{% block main %}{% endblock %}
 
-  {% block main %}{% endblock %}
-
-  {% block afterMain %}
-    <footer>
-      <nav class="footer-area">
-          <address>
-            Nave di Capitan Uncino<br>
-            il coccodrillo tiktok, 168<br>
-            30121 Isola che non c'e'<br>
-            Tel. 041.279 2411<br>
-            Email:
-            <a>IKEA@oceano.it</a>
-          </address>
-      </nav>
-    </footer>
-      {% endblock %}
+{% block afterMain %}
+  <footer>
+    <nav class="footer-area">
+      <address>
+        Nave di Capitan Uncino<br>
+        il coccodrillo tiktok, 168<br>
+        30121 Isola che non c'e'<br>
+        Tel. 041.279 2411<br>
+        Email:
+        <a>IKEA@oceano.it</a>
+      </address>
+    </nav>
+  </footer>
+{% endblock %}
