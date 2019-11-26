@@ -10,7 +10,7 @@ var apos = require('apostrophe')({
     'articoli-widgets': {},
     'salotti': {},
     'salotti-pages': { extend: 'apostrophe-pieces-pages' },
-    'apostrophe-search': {},
+   
     'apostrophe-workflow': {
       alias: 'workflow',
       replicateAcrossLocales: false
@@ -20,6 +20,7 @@ var apos = require('apostrophe')({
       extend: 'apostrophe-pieces-pages',
     },
     'apostrophe-events-widgets': {},
+    'apostrophe-search': {},
     'apostrophe-pages': {
       park: [
         {

@@ -27,11 +27,9 @@
           <h1>IKEA</h1>
         </div>
       </nav>
-        <form class="apos-search-form apos-mini-search-form" action="/search">
-          Search:
-          <input type="text" name="q" value="" class="search-field"/>
-          <input type="submit" class="search-submit" value="Go"/>
-        </form>
+      <form method="GET" action="/search">
+        <input type="text" name="q"/><input type="submit" value="Search"/>
+      </form>
     </div>
   </header>
 {% endblock %}
