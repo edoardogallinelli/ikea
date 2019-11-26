@@ -37,14 +37,6 @@ var apos = require('apostrophe')({
           label: 'Events',
           published: true
         }
-        //{
-        //  name: 'events-page',
-        //  label: 'Events Page',
-        //  type: 'apostrophe-events-page',
-        //  parkedId: 'lista-eventi',
-        //  published: true,
-        //  slug: '/lista-eventi'
-        //}
       ]
     },
   }

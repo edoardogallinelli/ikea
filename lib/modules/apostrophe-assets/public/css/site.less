@@ -1,60 +1,90 @@
 @import "utils/reset.less";
 
 // Delete the boilerplate CSS below when you are ready to dive in and customize your sites:
-body { background-color: @apos-light; }
+body {
+  background-color: @apos-light;
+}
 
 .main-content {
-  font-family: 'Karla', sans-serif;
-  margin: 200px auto;
-  padding: 20px;
-  max-width: 500px;
-  color: @apos-white;
+  font-family     : 'Karla', sans-serif;
+  margin          : 200px auto;
+  padding         : 20px;
+  max-width       : 500px;
+  color           : @apos-white;
   background-color: @apos-primary;
-  .apos-drop-shadow;
-
-  .login-link {
-    float: right;
-    color: @apos-white;
-  }
-
-  // Basic rich-text editor styles:
-  h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-  }
-
-  h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  strong { font-weight: bold; }
-  em { font-style: italic; }
 }
-.header-area{
+
+.login-link {
+  float: right;
+  color: @apos-white;
+}
+
+.o-carta {
+  display      : inline-block;
+  box-shadow   : 0 1px 2px 0 rgba(0, 0, 0, .15);
+  margin       : 20px;
+  position     : relative;
+  margin-bottom: 50px;
+  transition   : all .2s ease-in-out;
+}
+
+.o-carta-title {
+  background: #FFF;
+  padding   : 20px;
+  min-height: 200px;
+}
+
+.o-carta-date {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+// Basic rich-text editor styles:
+h3 {
+  font-size    : 24px;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size    : 20px;
+  margin-bottom: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.header-area {
   background-color: #c5cae9;
-  height: 200px;
-  font-size: 60px;
-  font-family: 'baskerville';
-  align-self: center;
+  height          : 200px;
+  font-size       : 60px;
+  font-family     : 'baskerville';
+  align-self      : center;
 }
-.footer-area{
+
+.footer-area {
   background-color: #c5cae9;
-  height: 200px;
-  font-size: 20px;
-  
+  height          : 200px;
+  font-size       : 20px;
+
 }
-.ricerca{
-  margin-top:  5%;
-  margin-left: 80%;
+
+.ricerca {
+  margin-top  : 5%;
+  margin-left : 80%;
   margin-right: 0;
 }
-.rowh{
+
+.rowh {
   font-family: 'baskerville';
-  text-align: center;
+  text-align : center;
 }
-address{
-  
+
+address {
+
   font-family: 'baskerville';
-  text-align: center; 
+  text-align : center;
 }
