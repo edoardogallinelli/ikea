@@ -1,14 +1,33 @@
 {% extends "layout.html" %}
-{% block title %}{{ data.page.title }}
-{% endblock %}
 
+{% block header %}
+    <style>
+        .card {
+            display: inline-block;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+            margin: 20px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .card-title {
+            background: #FFF;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+        .card-date {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+{% endblock %}
 {% block main %}
     {% for piece in data.pieces %}
-        <div class="apos-event-preview">
-            <h4 class="apos-event-title">
+        <div class="card">
+            <h4 class="card-title">
                 <a href="{{ piece._url }}">{{ piece.title }}</a>
             </h4>
-            <h5 class="apos-event-date">{{ piece.start | date('MMMM Do') }}
+            <h5 class="cart-date">{{ piece.start | date('MMMM Do') }}
                 at
                 {{ piece.start | date('h:mma') }}</h5>
         </div>
