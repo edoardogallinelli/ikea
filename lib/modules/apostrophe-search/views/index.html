@@ -1,7 +1,30 @@
 {% extends "layout.html" %}
-
+{# {% import 'macros/cards.html' as card %} #}
 {% block main %}
- {% for doc in data.docs %}
-    <h4>{% if doc._url %}<a href="{{ doc._url }}">{% endif %}{{ doc.title }}{% if doc._url %}</a>{% endif %}</h4>
+  <div>
+    {% for type, count in data.docs %}
+      <p>{{ type }}:{{ count }}</p>
+    {% endfor %}
+  </div>
+  {% for doc in data.docs %}
+    <div class="card">
+      {% set image = apos.images.first(doc.image) %}
+      {% if image %}
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"/>
+      {% else %}
+        <span class="missing-image"></span>
+      {% endif %}
+      <div class="container">
+        <h4>
+          {% if doc._url %}
+            <a href="{{ doc._url }}">
+            {% endif %}{{ doc.title }}
+            {% if doc._url %}
+            </a>
+          {% endif %}
+        </h4>
+        <span></span>
+      </div>
+    </div>
   {% endfor %}
 {% endblock %}
