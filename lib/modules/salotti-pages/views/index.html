@@ -6,7 +6,15 @@
                 <a href="{{salotto._url}}">
                     {{ salotto.title }}
                 </a>
-             </h1>
+                {% set image = apos
+                    .images
+                    .first(salotto.image) %}
+                {% if image %}
+                    <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"/>
+                {% else %}
+                    <span class="missing-image"></span>
+                {% endif %}
+            </h1>
         {% endfor %}
     </div>
 {% endblock %}

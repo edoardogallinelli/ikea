@@ -23,6 +23,14 @@
         <div class="o-carta">
             <h4 class="o-carta-title">
                 <a href="{{ piece._url }}">{{ piece.title }}</a>
+                {% set image = apos
+                    .images
+                    .first(piece.image) %}
+                {% if image %}
+                    <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"/>
+                {% else %}
+                    <span class="missing-image"></span>
+                {% endif %}
             </h4>
             <h5 class="o-carta-date">{{ piece.start | date('MMMM Do') }}
                 at
