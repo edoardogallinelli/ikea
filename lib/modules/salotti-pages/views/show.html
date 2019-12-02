@@ -6,12 +6,10 @@
     <div class="main-content">
         {% for piece in data.piece._articoli %}
             <h2>
-                {% if url %}
-                    <a href="{{ url }}">{{ piece.title }}</a>
-                {% else %}
+                <a href="{{piece._url}}">
                     {{ piece.title }}
-                {% endif %}
+                </a>
             </h2>
-            {% endfor %}
-        </div>
-    {% endblock %}
+        {% endfor %}
+    </div>
+{% endblock %}
