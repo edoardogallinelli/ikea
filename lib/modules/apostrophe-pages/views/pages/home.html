@@ -1,5 +1,15 @@
 {% extends "layout.html" %}
 {% block main %}
+
+  <div class="main-content">
+  {{ 
+    apos.area(data.page, 'body', {
+              widgets:{
+                'apostrophe-images': {} }
+              })
+  }}  
+  </div>
+
   <div class="main-content">
     <h3>Hello world!
       {% if not data.user %}
