@@ -31,10 +31,24 @@ var apos = require('apostrophe')({
           published: true
         },
         {
-          title: 'Events List',
+          title: 'Eventi',
           slug: '/events-list',
           type: 'apostrophe-events-page',
           label: 'Events',
+          published: true
+        },
+        {
+          title: 'Articoli',
+          slug: '/lista-articoli',
+          type: 'articoli-pages',
+          label: 'Articoli',
+          published: true
+        },
+        {
+          title: 'Salotti',
+          slug: '/lista-salotti',
+          type: 'salotti-pages',
+          label: 'Salotti',
           published: true
         }
       ]

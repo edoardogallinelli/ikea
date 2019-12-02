@@ -26,19 +26,28 @@
         <div class="rowh mb-5">
           <h1>IKEA</h1>
         </div>
-        <div class="ricerca">
-          <form method="GET" action="/search">
-            <input type="text" name="q" value="" class="search-field"/><input type="submit" class="search-submit" value="Go"/>
-          </form>
-{# 
-          <form class="apos-search-form apos-mini-search-form" action="/search">
-            Search:
-            <input type="text" name="q" value="" class="search-field"/>
-            <input type="submit" class="search-submit" value="Go"/>
-          </form> #}
+        <ul id="megamenu-main" class="dropdown-menu mega-dropdown-menu row">
+          <li>
+            <div class="container1">
+              <div class="row">
+                <div class="col-12 mt-4 mb-0 pt-5 px-2 text-right">
+                  <h3 class="m-0">
+                    <a href="{{'/lista-salotti'}}">{{('Salotti')}}
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </li>
 
-        </div>
+          <div class="ricerca">
+            <form method="GET" action="/search">
+              <input type="text" name="q" value="" class="search-field"/><input type="submit" class="search-submit" value="Go"/>
+            </form>
+          </div>
+        </ul>
       </nav>
+
     </div>
   </header>
 {% endblock %}

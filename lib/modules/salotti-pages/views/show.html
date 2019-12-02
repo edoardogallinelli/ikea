@@ -4,6 +4,14 @@
         <h1>{{ data.piece.title }}</h1>
     </div>
     <div class="main-content">
-        <h2>{{data.piece._articoli}}</h2>
-    </div>
-{% endblock %}
+        {% for piece in data.piece._articoli %}
+            <h2>
+                {% if url %}
+                    <a href="{{ url }}">{{ piece.title }}</a>
+                {% else %}
+                    {{ piece.title }}
+                {% endif %}
+            </h2>
+            {% endfor %}
+        </div>
+    {% endblock %}
