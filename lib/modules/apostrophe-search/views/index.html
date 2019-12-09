@@ -6,8 +6,8 @@
       <p>{{ type }}:{{ count }}</p>
     {% endfor %}
   </div>
-  {% for doc in data.docs %}
     <div class="card">
+  {% for doc in data.docs %}
       {% set image = apos.images.first(doc.image) %}
       {% if image %}
         <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"/>
@@ -25,6 +25,6 @@
         </h4>
         <span></span>
       </div>
-    </div>
   {% endfor %}
+    </div>
 {% endblock %}
