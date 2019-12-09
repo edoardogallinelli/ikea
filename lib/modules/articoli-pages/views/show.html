@@ -4,6 +4,12 @@
     <h2>{{ data.piece.title }}</h2>
     <p>{{data.piece.descrizione}}
     </p>
+    {% set image = apos.images.first(data.piece.image) %}
+      {% if image %}
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"/>
+      {% else %}
+        <span class="missing-image"></span>
+      {% endif %}
   </div>
 
 {% endblock %}

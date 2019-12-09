@@ -5,6 +5,14 @@
     </div>
     <div class="main-content">
         {% for piece in data.piece._articoli %}
+
+        {% set image = apos.images.first(data.piece.image) %}
+      {% if image %}
+        <img src="{{ apos.attachments.url(image, { size: 'one-sixth' }) }}"/>
+      {% else %}
+        <span class="missing-image"></span>
+      {% endif %}
+
             <h2>
                 <a href="{{piece._url}}">
                     {{ piece.title }}
