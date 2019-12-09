@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block main %}
+    <div class="main-content">
+        {% for camera in data.pieces %}
+            <h1>
+                <a href="{{camera._url}}">
+                    {{ camera.title }}
+                </a>
+            </h1>
+        {% endfor %}
+    </div>
+{% endblock %}
