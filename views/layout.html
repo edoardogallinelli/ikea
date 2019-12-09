@@ -1,5 +1,6 @@
 {# Automatically extends the right outer layout and also handles AJAX siutations #}
 {% extends data.outerLayout %}
+
 {% block title %}
   {# Create a useful, SEO-friendly title tag based on what we have #}
   {% if data.piece %}
@@ -11,10 +12,8 @@
   {% endif %}
 {% endblock %}
 {% block extraHead %}
-  {#
-    This block outputs its contents in the HTML document's <head>.
-    It is a good place to put extra <script> <link> and <meta> tags.
-  #}
+  <script src="https://kit.fontawesome.com/4f5d2ea87b.js" crossorigin="anonymous"></script>
+
 {% endblock %}
 {% block beforeMain %}
   <header>
@@ -37,9 +36,10 @@
             <li>
               <a href="/events-list">Eventi</a>
             </li>
-            <li style="float:right"  style="margin-top:10px">
+            <li style="margin-top:10px">
               <form class="search-menu" method="GET" action="/search">
-                <input type="text" name="q" value="" class="search-field"/><input type="submit" class="search-submit" value="Go"/>
+                <input type="text" name="q" value="" class="search-field"/> 
+                <button> <i class="fas fa-search"/> </button>
               </form>
             </li>
           </ul>
